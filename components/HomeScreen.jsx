@@ -1,6 +1,7 @@
 import { SafeAreaView, StatusBar, View, Text, Image } from "react-native";
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from "react-native-responsive-screen";
-// import Ionicons from "react-native-vector-icons/Ionicons";
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import ImageSlider from "./ImageSlider";
 
 export default function HomeScreen() {
     return (
@@ -28,11 +29,14 @@ export default function HomeScreen() {
                     <View className="bg-neutral-200 flex justify-center items-center border-[3px] border-neutral-300"
                         style={{ height: hp(5.5), width: wp(5.5) }}
                     >
-                        {/* <Ionicons name="notifications" size={hp(3)} color="gray" /> */}
+                        <Ionicons name="notifications" size={30} color="#900" />
                     </View>
-
-
                 </View>
+            </View>
+
+            {/* Image Slider */}
+            <View>
+                <ImageSlider />
             </View>
         </SafeAreaView>
     )
